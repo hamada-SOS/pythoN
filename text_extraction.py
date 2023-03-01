@@ -1,7 +1,10 @@
-from PyPDF2 import PdfFileReader , PdfFileWriter
+import re
+from pdfminer.high_level import extract_pages, extract_text
 
-file_path = '@somalibooks gabadhii-labada-reer-heshiisay.pdf'
+# for page_layout in extract_pages('@somalibooks gabadhii-labada-reer-heshiisay.pdf'):
+#     for elemment in page_layout:
+#         print(elemment)
 
-pdf = PdfFileReader(file_path)
+text = extract_text("@somalibooks gabadhii-labada-reer-heshiisay.pdf")
 
-with open()
+print(text)
